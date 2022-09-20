@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-str = "and is is less than 6 and not 0"
+str = "and is less than 6 and not 0"
 if (number < 0):
     last = (number * -1) % 10
     last = last * -1
@@ -11,7 +11,7 @@ if (number < 0):
         print(f"Last digit of {number} is {last} " + str)
     else:
         print(f"Last digit of {number} is {last}")
-elif (number > 0):
+elif (number >= 0):
     last = number % 10
     if (last == 0):
         print(f"Last digit of {number} is {last} and is 0")
