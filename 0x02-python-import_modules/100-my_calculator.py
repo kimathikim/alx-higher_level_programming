@@ -10,18 +10,17 @@ def main():
         exit(1)
 
     a = int(sys.argv[1])
-    sign = sys.argv[2]
     b = int(sys.argv[3])
-    if sign == '+':
+    if argv[2] == '+':
         result = add(a, b)
         print("{} {} {} = {}".format(a, sys.argv[2], b, result))
-    elif sign == '-':
+    elif argv[2] == '-':
         result = sub(a, b)
         print("{} {} {} = {}".format(a, sys.argv[2], b, result))
-    elif sign == '*':
+    elif argv[2] == '*':
         result = mul(a, b)
         print("{} {} {} = {}".format(a, sys.argv[2], b, result))
-    elif sign == '/':
+    elif argv[2] == '/':
         result = div(a, b)
         print("{} {} {} = {}".format(a, sys.argv[2], b, result))
     else:
