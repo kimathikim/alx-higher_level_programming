@@ -4,25 +4,20 @@ from calculator_1 import add, sub, div, mul
 
 
 def main():
-    result = 0
     if (len(sys.argv) != 3):
         print("./100-my_calculator.py a operator b")
         exit(1)
 
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    if argv[2] == '+':
-        result = add(a, b)
-        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
-    elif argv[2] == '-':
-        result = sub(a, b)
-        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
-    elif argv[2] == '*':
-        result = mul(a, b)
-        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
-    elif argv[2] == '/':
-        result = div(a, b)
-        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
+    if sys.argv[2] == '+':
+        print("{} {} {} = {}".format(a, sys.argv[2], b, add(a, b)))
+    elif sys.argv[2] == '-':
+        print("{} {} {} = {}".format(a, sys.argv[2], b, sub(a, b)))
+    elif sys.argv[2] == '*':
+        print("{} {} {} = {}".format(a, sys.argv[2], b, mul(a, b)))
+    elif sys.argv[2] == '/':
+        print("{} {} {} = {}".format(a, sys.argv[2], b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
