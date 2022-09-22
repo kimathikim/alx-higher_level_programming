@@ -12,16 +12,16 @@ if __name__ == "__main__":
         b = argv[3]
     if sign == '+':
         result = add(int(a), int(b))
-        print("{} + {} = {}".format(a,b, result))
+        print("{} + {} = {}".format(a, b, result))
     elif sign == '-':
         result = sub(int(a), int(b))
-        print("{} - {} = {}".format(a,b, result))
+        print("{} - {} = {}".format(a, b, result))
     elif sign == '*':
         result = mul(int(a), int(b))
-        print("{} * {} = {}".format(a,b, result))
+        print("{} * {} = {}".format(a, b, result))
     elif sign == '/':
         result = div(int(a), int(b))
-        print("{} / {} = {}".format(a,b, result))
+        print("{} / {} = {}".format(a, b, result))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
