@@ -10,7 +10,7 @@ def main():
         exit(1)
 
     a = int(sys.argv[1])
-    sign = int(sys.argv[2])
+    sign = sys.argv[2]
     b = int(sys.argv[3])
     if sign == '+':
         result = add(a, b)
