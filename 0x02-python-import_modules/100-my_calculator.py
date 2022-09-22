@@ -7,9 +7,9 @@ if __name__ == "__main__":
         print("./100-my_calculator.py a operator b")
         exit(1)
 
-    a = sys.argv[1]
-    sign = sys.argv[2]
-    b = sys.argv[3]
+    a = int(sys.argv[1])
+    sign = int(sys.argv[2])
+    b = int(sys.argv[3])
     if sign == '+':
         result = add(a, b)
         print("{} + {} = {}".format(a, b, result))
