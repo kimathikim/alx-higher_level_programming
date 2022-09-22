@@ -14,16 +14,16 @@ def main():
     b = int(sys.argv[3])
     if sign == '+':
         result = add(a, b)
-        print("{} {} {} = {}".format(a, argv[2], b, result))
+        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
     elif sign == '-':
         result = sub(a, b)
-        print("{} {} {} = {}".format(a, argv[2], b, result))
+        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
     elif sign == '*':
         result = mul(a, b)
-        print("{} {} {} = {}".format(a, argv[2], b, result))
+        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
     elif sign == '/':
         result = div(a, b)
-        print("{} {} {} = {}".format(a, argv[2], b, result))
+        print("{} {} {} = {}".format(a, sys.argv[2], b, result))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
