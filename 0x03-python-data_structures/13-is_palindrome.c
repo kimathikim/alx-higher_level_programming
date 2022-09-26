@@ -7,14 +7,14 @@
  */
 int comparator(listint_t **head, listint_t *last)
 {
-    if (last == NULL)
-        return (1);
-    if (comparator(head, last->next) && (*head)->n == last->n)
-    {
-        *head = (*head)->next;
-        return (1);
-    }
-    return (0);
+	if (last == NULL)
+		return (1);
+	if (comparator(head, last->next) && (*head)->n == last->n)
+	{
+		*head = (*head)->next;
+		return (1);
+	}
+	return (0);
 }
 /**
  * is_palindrome - checks if a singly linked list is a palindrome
@@ -23,6 +23,7 @@ int comparator(listint_t **head, listint_t *last)
  */
 int is_palindrome(listint_t **head)
 {
-    if (!head || !(*head))
-        return (1);
-    return (comparator(head, *head));
+	if (!head || !(*head))
+		return (1);
+	return (comparator(head, *head));
+}
