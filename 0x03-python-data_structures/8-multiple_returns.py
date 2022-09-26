@@ -7,5 +7,5 @@ def multiple_returns(sentence):
         t += s[0],
         return (t)
     t += len(s),
-    t += None,
+    t += "None",
     return (t)
