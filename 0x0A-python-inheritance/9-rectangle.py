@@ -16,10 +16,10 @@ class Rectangle(BaseGeometry):
             width: rectangle Width
             height: rectangle height
         """
+        self.integer_validator("width", width)
+        self.integer_validator("Height", height)
         self.__width = width
         self.__height = height
-        self.integer_validator("width", self.__width)
-        self.integer_validator("Height", self.__height)
 
     def __str__(self):
         """Returns a formatted string"""
