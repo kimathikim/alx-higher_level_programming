@@ -18,7 +18,6 @@ class Base:
         Args:
         id: The identity of a new base
         """
-
         if (id):
             self.id = id
         else:
