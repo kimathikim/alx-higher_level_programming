@@ -215,6 +215,8 @@ class TestBase_save_to_file(unittest.TestCase):
     def test_save_to_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Square.save_to_file([], 1)
+
+
 class TestBase_from_json_string(unittest.TestCase):
     """Unittests for testing from_json_string method of Base class."""
 
@@ -385,4 +387,3 @@ class TestBase_load_from_file(unittest.TestCase):
     def test_load_from_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
-            
