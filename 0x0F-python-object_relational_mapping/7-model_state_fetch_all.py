@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 """Module for query"""
 
 
-def all_states():
+if __name__ == "__main__":
     """This metod is used to get all the data from state table"""
     try:
         engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
@@ -25,7 +25,3 @@ def all_states():
 
     for row in rows:
         print("{}: {}".format(row.id, row.name))
-
-
-if __name__ == '__main__':
-    all_states()
