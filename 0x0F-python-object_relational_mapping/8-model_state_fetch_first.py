@@ -14,5 +14,9 @@ if __name__ == "__main__":
     session = Session()
 
     rows = session.query(State).first()
-    print("{}: {}".format(rows.id, rows.name))
+    if rows is not None:
+        print("{}: {}".format(rows.id, rows.name))
+    else:
+        print("No state found in the database")
+    session.close()
     session.close()
