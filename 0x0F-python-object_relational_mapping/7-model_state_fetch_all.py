@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-
+"""Module for query"""
 from sqlalchemy.orm import sessionmaker
 from model_state import State, Base
 import sys
 from sqlalchemy import create_engine
-"""Module for query"""
-
-
 if __name__ == "__main__":
     """This metod is used to get all the data from state table"""
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
