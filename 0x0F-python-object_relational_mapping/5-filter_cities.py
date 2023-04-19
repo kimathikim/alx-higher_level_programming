@@ -29,6 +29,7 @@ def state():
             print(city, end=", ")
         else:
             print(city, end="")
+    print()
     cur.close()
     db.close()
 
