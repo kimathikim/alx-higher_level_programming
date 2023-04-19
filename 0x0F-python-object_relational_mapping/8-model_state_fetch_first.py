@@ -19,4 +19,3 @@ if __name__ == "__main__":
     else:
         print("No state found in the database")
     session.close()
-    session.close()
