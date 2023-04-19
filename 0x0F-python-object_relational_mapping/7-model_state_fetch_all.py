@@ -9,14 +9,9 @@ from sqlalchemy import create_engine
 
 if __name__ == "__main__":
     """This metod is used to get all the data from state table"""
-    try:
-        engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                               format(sys.argv[1], sys.argv[2],
-                                      sys.argv[3]), pool_pre_ping=True)
-
-    except Exception as e:
-        print("Failed to create an engine")
-        raise e
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
+                           format(sys.argv[1], sys.argv[2],
+                                  sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
