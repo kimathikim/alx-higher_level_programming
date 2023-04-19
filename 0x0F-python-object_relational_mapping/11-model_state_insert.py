@@ -16,9 +16,7 @@ if __name__ == "__main__":
     session = Session()
     rows = session.query(State).all()
 
-    if not session.query(State).filter(State.name.in_(
-            ['Louisiana'])).all():
-        session.add(State(name='Louisiana'))
+    session.add(State(name='Louisiana'))
 
     value = 0
     for row in rows:
