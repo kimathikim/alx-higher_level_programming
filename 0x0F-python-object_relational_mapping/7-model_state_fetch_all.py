@@ -4,9 +4,11 @@ from sqlalchemy.orm import sessionmaker
 from model_state import State
 import sys
 from sqlalchemy import create_engine
+"""Module for query"""
 
 
 def all_states():
+    """This metod is used to get all the data from state table"""
     try:
         engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                                format(sys.argv[1], sys.argv[2],
