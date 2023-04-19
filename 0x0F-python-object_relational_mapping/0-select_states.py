@@ -2,7 +2,11 @@
 
 import MySQLdb
 from sys import argv
-if __name__ == "__main__":
+
+
+def select_s():
+    """conect and query data from a database"""
+
     user = argv[1]
     pas = argv[2]
     database = argv[3]
@@ -15,4 +19,9 @@ if __name__ == "__main__":
 
     for i in rows:
         print(i)
+    cur.close()
+    db.close()
+
+
+select_s()
 
