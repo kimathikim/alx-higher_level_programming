@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from sqlalchemy.orm import sessionmaker
-from model_state import State
+from model_state import State, Base
 import sys
 from sqlalchemy import create_engine
 """Module for query"""
@@ -17,7 +17,7 @@ def all_states():
     except Exception as e:
         print("Failed to create an engine")
         raise e
-
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
