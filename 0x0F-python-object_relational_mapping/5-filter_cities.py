@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-
 import MySQLdb
 from sys import argv
 
 
 def state():
     """ lists all cities from the database hbtn_0e_4_usa"""
-
     try:
         db = MySQLdb.connect(
             host="localhost", port=3306, user=argv[1], passwd=argv[2],
