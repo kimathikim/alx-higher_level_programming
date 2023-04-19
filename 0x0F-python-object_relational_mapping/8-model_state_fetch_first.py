@@ -17,5 +17,5 @@ if __name__ == "__main__":
     if rows is not None:
         print("{}: {}".format(rows.id, rows.name))
     else:
-        print("No state found in the database")
+        print("Nothing")
     session.close()
