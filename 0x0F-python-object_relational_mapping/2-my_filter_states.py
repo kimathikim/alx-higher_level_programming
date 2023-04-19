@@ -21,7 +21,7 @@ def state():
 
     for i in rows:
         for b in i:
-            if type(b) == str and b == "{}".format(argv[4]):
+            if type(b) == str and b == argv[4]:
                 print(i)
     cur.close()
     db.close()
