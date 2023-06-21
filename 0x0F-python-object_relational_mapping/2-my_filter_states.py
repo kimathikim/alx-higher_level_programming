@@ -16,13 +16,15 @@ def state():
         print("unable to connect to the database")
         return 0
     cur = db.cursor()
-    cur.execute("SELECT * FROM states")
+    cur.execute(
+        "SELECT * FROM states WHERE name='{}' ORDER BY states.id".format(
+            argv[4])
+    )
     rows = cur.fetchall()
 
     for i in rows:
-        for b in i:
-            if type(b) == str and b == argv[4]:
-                print(i)
+        print(i)
+
     cur.close()
     db.close()
 
