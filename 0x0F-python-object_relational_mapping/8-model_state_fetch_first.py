@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    rows = session.query(State).first()
+    rows = session.query(State).group_by(State.id).first()
     if rows is not None:
         print("{}: {}".format(rows.id, rows.name))
     else:
