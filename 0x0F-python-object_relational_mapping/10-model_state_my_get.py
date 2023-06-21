@@ -22,7 +22,7 @@ if __name__ == "__main__":
     for row in rows:
         if row.name == sys.argv[4]:
             value = row.id
-    if value != 0:
-        print(value)
+    if value > 0:
+        print('{}'.format(value))
     else:
         print("Not found")
