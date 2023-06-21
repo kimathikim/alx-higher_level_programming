@@ -8,8 +8,8 @@ def select_s():
     """conect and query data from a database"""
     try:
         db = MySQLdb.connect(
-            host="localhost", port=3306, user=argv[1], passwd=argv[2],
-            db=argv[3])
+            host="localhost", port=3306, user="root", passwd="Kimathi@2022",
+            db="hbtn_0e_0_usa")
     except Exception:
         print("unable to connect to the database")
         return 0
