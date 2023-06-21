@@ -17,7 +17,7 @@ def state():
     cur = db.cursor()
     cur.execute(
         "SELECT c.id, c.name, s.name FROM cities AS c JOIN states AS s\
-        where c.state_id=s.id")
+        where c.state_id=s.id ORDER BY c.id")
     rows = cur.fetchall()
 
     for i in rows:

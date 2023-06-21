@@ -17,10 +17,12 @@ def state():
         "SELECT c.name, s.name FROM cities AS c JOIN states AS s\
         where c.state_id=s.id")
     rows = cur.fetchall()
+    # print(rows)
     cities = []
 
     for i in rows:
         if i[1] == argv[4]:
+            # print(i[0])
             cities.append(i[0])
     for city in cities:
         if city != cities[-1]:
