@@ -16,6 +16,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    rows = session.query(State).filter(State.name.ilike('%a%'))
+    rows = session.query(State).group_by(
+        State.id).filter(State.name.like('%a%'))
     for row in rows:
         print("{}: {}".format(row.id, row.name))
