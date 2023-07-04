@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+def find_peak(nums):
+    if not nums:
+        return None
+
+    start = 0
+    end = len(nums) - 1
+
+    while start < end:
+        mid = (start + end) // 2
+
+        if nums[mid] > nums[mid + 1] and nums[mid] > nums[mid - 1]:
+            return nums[mid]
+
+        if nums[mid] < nums[mid + 1]:
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    if start == end:
+        return nums[start]
+
+    return None
