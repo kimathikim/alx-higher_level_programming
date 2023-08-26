@@ -1,4 +1,3 @@
 #!/bin/bash
 #  bash script that prints out the methods that are Allowed
-url="$1"
-curl -sI "$url" | awk '/Allow:/ {print $2}'
+curl -siX OPTIONS "$1" | grep Allow | awk -F ':' '{print $2}'
