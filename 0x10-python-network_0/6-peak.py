@@ -5,7 +5,6 @@
 def find_peak(nums):
     if not nums:
         return None
-
     start = 0
     end = len(nums) - 1
 
@@ -14,13 +13,12 @@ def find_peak(nums):
 
         if nums[mid] > nums[mid + 1] and nums[mid] > nums[mid - 1]:
             return nums[mid]
-
         if nums[mid] < nums[mid + 1]:
             start = mid + 1
         else:
             end = mid - 1
 
     if start == end:
-        return nums[start]
+        return nums[end]
 
-    return None
+    return 0
