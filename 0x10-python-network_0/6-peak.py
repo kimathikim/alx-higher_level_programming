@@ -3,6 +3,7 @@
 
 
 def find_peak(nums):
+    """function that find the peak of unsorted list"""
     if not nums:
         return None
     start = 0
