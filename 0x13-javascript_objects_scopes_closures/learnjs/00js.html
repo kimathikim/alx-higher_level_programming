@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object-oriented JavaScript example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+<button id="btn">Click Me for Notification</button>
+
+<script>
+    class Person {
+
+        name;
+
+        constructor(name) {
+            this.name = name;
+        }
+
+        introSelf() {
+            console.log(`Hi, I'm ${this.name}`);
+        }
+    }
+
+    // Inheritance for a class
+    class Professor extends Person {
+
+        #teaches;
+
+        constructor(name, teaches) {
+            super(name);
+            this.#teaches = teaches;
+      }
+
+        introSelf() {
+            console.log(`Hi, I'm Professor ${this.name}. I will be taking you through ${this.#teaches}`);
+        }
+
+        grade(paper) {
+            const grade = Math.floor(Math.random() * (5 - 1) + 1);
+            console.log(grade);
+        }
+    }
+
+    const giles = new Person("Giles");
+    giles.introSelf();
+</script>
+</body>
+</html>
+
