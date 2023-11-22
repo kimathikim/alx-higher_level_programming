@@ -30,5 +30,4 @@ def state_id():
             print(f"Error executing the query: {e}")
 
 
-if __name__ == "__main__":
-    state_id()
+state_id()
