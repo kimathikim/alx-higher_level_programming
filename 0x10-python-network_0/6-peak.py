@@ -4,14 +4,27 @@ def find_peak(list_of_integers):
     if not list_of_integers:
         return None
 
-    left, right = 0, len(list_of_integers) - 1
+    length = len(list_of_integers)
+    mid = int(length / 2)
 
-    while left < right:
-        mid = (left + right) // 2
-
-        if list_of_integers[mid] < list_of_integers[mid + 1]:
-            left = mid + 1
+    # check 3 values.
+    if mid + 1 >= length and mid - 1 < 0:
+        return list_of_integers[mid]
+    elif mid - 1 < 0:
+        if list_of_integers[mid] > list_of_integers[mid + 1]:
+            return list_of_integers[mid]
         else:
-            right = mid
+            return list_of_integers[mid + 1]
+    elif mid + 1 >= length:
+        if list_of_integers[mid] > list_of_integers[mid - 1]:
+            return list_of_integers[mid]
+        else:
+            return list_of_integers[mid - 1]
 
-    return list_of_integers[left]
+    if list_of_integers[mid - 1] < list_of_integers[mid] > list_of_integers[mid + 1]:
+        return list_of_integers[mid]
+
+    if list_of_integers[mid + 1] > list_of_integers[mid - 1]:
+        return find_peak(list_of_integers[mid:])
+
+    return find_peak(list_of_integers[:mid])
