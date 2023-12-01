@@ -1,11 +1,12 @@
-#!/bin/python3
-""""code to fetch a url and print the response"""
-from urllib import request
+#!/usr/bin/python3
+"""Fetching and displaying data from a URL."""
+if __name__ == "__main__":
+    import urllib.request as request
 
-with request.urlopen("https://intranet.hbtn.io/status") as response:
-    response = response.read()
-    print("\t- utf8 content: {}".format(response.decode("utf-8")))
-    print("Body response:")
-    print("\t- type: {}".format(type(response)))
-    print("\t- content: {}".format(response))
-    print("\t- utf8 content: {}".format(response.decode("utf-8")))
+    url = "https://alx-intranet.hbtn.io/status"
+    with request.urlopen(url) as res:
+        res = res.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(res)))
+        print("\t- content: {}".format(res))
+        print("\t- utf8 content: {}".format(res.decode("utf-8")))
