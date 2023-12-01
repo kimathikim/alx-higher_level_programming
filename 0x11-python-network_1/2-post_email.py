@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Using post request to post an email to the server"""
+"""Using post request to post an email to the server.
+decode the res using utf-8 and display the result"""
 if __name__ == "__main__":
     import urllib.request as request
     import urllib.parse as parse
