@@ -5,8 +5,8 @@ if __name__ == "__main__":
     from sys import argv
 
     url = argv[1]
-    with requests.get(url) as res:
-        if res.status_code < 400:
-            print(res.text)
-        else:
-            print("Error code: {}".format(res.status_code))
+    res = requests.get(url)
+    if res.status_code < 400:
+        print(res.text)
+    else:
+        print("Error code: {}".format(res.status_code))
