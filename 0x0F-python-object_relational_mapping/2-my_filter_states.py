@@ -11,7 +11,8 @@ def state():
     try:
         db = MySQLdb.connect(
             host="localhost", port=3306, user=argv[1], passwd=argv[2],
-            db=argv[3])
+            db=argv[3]
+        )
     except Exception:
         print("unable to connect to the database")
         return 0
